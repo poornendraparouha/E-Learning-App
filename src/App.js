@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Details from "./pages/app/details/Details";
 import Learn from "./pages/app/learn/Learn";
 import Chapter from "./pages/app/chapter/Chapter";
+import Page404 from "./pages/misc/Page404/Page404"
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   const browserRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Nav />, children: [
+      element: <Nav />, errorElement: < Page404/>, children: [
         {index : true, element: <Hero/>},
         {path: "/courses", children:[
           {index: true, element: <Courses/>},
