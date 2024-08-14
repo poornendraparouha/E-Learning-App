@@ -17,7 +17,7 @@ function App() {
           {index: true, element: <Courses/>},
           {path: ":courseId", element: < Details/>}
         ]},
-        {path: "/learn/courseId", element: <Learn/>}
+        {path: "/learn/:courseId", element: <Learn/>}
       ]}
   ]);
   return (
